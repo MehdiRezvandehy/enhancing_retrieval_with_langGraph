@@ -58,8 +58,8 @@ def run_pipeline():
    #APP_PASSWORD = os.getenv("APP_PASSWORD")
    #RECIPIENTS = os.getenv("RECIPIENTS") # for multiple emails ==> os.getenv("RECIPIENTS").split(",")
 
-    #print(" Automatic send email")
-    #send_email_report(EMAIL_ADDRESS, APP_PASSWORD, RECIPIENTS, state["llm_output"])
+    send_email_report(EMAIL_ADDRESS, APP_PASSWORD, RECIPIENTS, state["llm_output"])
+    print("Automatic email has been sent")
 
 
 # =======================================================
