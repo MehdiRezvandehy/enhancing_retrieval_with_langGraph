@@ -39,9 +39,15 @@ print("Running RAG pipeline...\n")
 
 pipeline = None  # will be defined later
 
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
 # Call pipeline AFTER function definitions load
 def run_pipeline():
     global pipeline
+    
     pipeline = langraph_rag(source_links)
     inputs = {"query": query}
 
@@ -491,10 +497,6 @@ def send_email_report(sender_email, app_password, recipients, content):
 # MUST ADD THIS or nothing runs
 # ============================
 if __name__ == "__main__":
-    import os
-    import smtplib
-    from email.mime.text import MIMEText
-    from email.mime.multipart import MIMEMultipart
 
     rag_output = run_pipeline()
 
