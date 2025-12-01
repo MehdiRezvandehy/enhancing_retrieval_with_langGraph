@@ -21,3 +21,4 @@ ipython-genutils==0.2.0
 ipython_pygments_lexers==1.1.1
 beautifulsoup4==4.12.3
 lxml==5.2.1
+chromadb==0.5.23
