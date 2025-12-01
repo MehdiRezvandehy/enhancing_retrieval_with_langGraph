@@ -54,9 +54,9 @@ def run_pipeline():
     # Final generation
     print(state["llm_output"])
 
-    EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
-    APP_PASSWORD = os.getenv("APP_PASSWORD")
-    RECIPIENTS = os.getenv("RECIPIENTS") # for multiple emails ==> os.getenv("RECIPIENTS").split(",")
+   #EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+   #APP_PASSWORD = os.getenv("APP_PASSWORD")
+   #RECIPIENTS = os.getenv("RECIPIENTS") # for multiple emails ==> os.getenv("RECIPIENTS").split(",")
 
     #print(" Automatic send email")
     #send_email_report(EMAIL_ADDRESS, APP_PASSWORD, RECIPIENTS, state["llm_output"])
@@ -107,9 +107,8 @@ def langraph_rag(source_links):
     # -------------------------------------------------------
     # API Keys
     # -------------------------------------------------------
-    load_dotenv(override=True)
+    #load_dotenv(override=True)
     #os.environ['OPENAI_API_KEY'] = os.environ("OPENAI_API_KEY")
-    os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
     llm = ChatOpenAI(model="gpt-4o", temperature=0)
     
     # -------------------------------------------------------
@@ -362,7 +361,6 @@ def langraph_rag(source_links):
 
     # You need to get your API key from https://app.tavily.com for web search.
     #os.environ["TAVILY_API_KEY"] = os.environ.get("TAVILY_API_KEY")
-    os.environ["TAVILY_API_KEY"] = os.getenv("TAVILY_API_KEY")
     
     def web_search(query_state):
         """

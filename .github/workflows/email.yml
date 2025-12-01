@@ -27,4 +27,6 @@ jobs:
         EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
         APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
         RECIPIENTS: ${{ secrets.RECIPIENTS }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
       run: python automated_rag_email.py
