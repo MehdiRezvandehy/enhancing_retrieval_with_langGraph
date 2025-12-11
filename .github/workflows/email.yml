@@ -1,10 +1,11 @@
 name: Send Email Report
 
-on: [push]
-  #schedule:
-  #  #- cron: "0 14 * * *"   # Runs every day at 14:00 UTC
-  #  - cron: "*/30 * * * *"  # Runs every day 30 min
-  #workflow_dispatch:        # allows manual runs
+on: 
+  push:
+  schedule:
+    #- cron: "0 14 * * *"   # Runs every day at 14:00 UTC
+    - cron: "*/30 * * * *"  # Runs every day 30 min
+  workflow_dispatch:        # allows manual runs
 #
 jobs:
   send-email:
@@ -29,4 +30,4 @@ jobs:
         RECIPIENTS: ${{ secrets.RECIPIENTS }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-      run: python automated_rag_email.py
+      run: python multi_rag_email_pipeline.py
