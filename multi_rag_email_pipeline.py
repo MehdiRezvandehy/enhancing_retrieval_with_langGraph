@@ -622,7 +622,7 @@ def aggregate_answers(llm, rag_outputs):
 def send_email_report(EMAIL_ADDRESS, APP_PASSWORD, RECIPIENTS, markdown_text, subject):
     msg = MIMEMultipart("alternative")
     msg["From"] = EMAIL_ADDRESS
-    msg["To"] = ", ".join(RECIPIENTS)
+    msg["To"] = RECIPIENTS
     msg["Subject"] = subject
 
     # Convert markdown → HTML
