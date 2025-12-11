@@ -2,9 +2,8 @@ name: Send Email Report
 
 on: 
   push:
-  schedule:
+  #schedule:
     #- cron: "0 14 * * *"   # Runs every day at 14:00 UTC
-    - cron: "*/30 * * * *"  # Runs every day 30 min
   workflow_dispatch:        # allows manual runs
 #
 jobs:
