@@ -6,7 +6,8 @@ Description:
 This script implements a fully automated, multi-step Retrieval-Augmented Generation (RAG) pipeline
 using LangGraph and OpenAI LLMs to answer user queries based on multiple web sources. It is designed 
 to handle cases where relevant information may not be immediately available and can refine queries 
-or perform web searches dynamically.
+or perform web searches dynamically. 
+
 
 Key Features:
 1. Document Retrieval: Fetches content from provided URLs and splits them into manageable chunks.
@@ -31,6 +32,8 @@ Execution Options:
   (OpenAI API key, email credentials, Tavily API key).
 - Automated Scheduled Runs: Use GitHub Actions to run the pipeline on a schedule (daily, weekly,
   hourly). Store credentials in GitHub Secrets to allow the workflow to authenticate and send emails.
+
+This script shows the usecase of   
 """
 
 from datetime import date
@@ -44,11 +47,11 @@ rag_inputs = [
         "links": ["https://www.stadiumnissan.com/our-promotions.html"]
     },
     {
-        "question": f"What Honda vehicle offers are available in Alberta as of {formatted_date}?",
+        "question": f"What Honda offers are available in Alberta as of {formatted_date}?",
         "links": ["https://www.honda.ca/special-offers/alberta"]
     },
     {
-        "question": f"What are Toyota’s latest financing deals in Alberta as of {formatted_date}?",
+        "question": f"What are Toyota’s latest special deals in Alberta as of {formatted_date}?",
         "links": ["https://www.shoptoyota.ca/alberta/en"]
     },
     {
@@ -662,7 +665,7 @@ if __name__ == "__main__":
     print("MULTI LangGraphRAG COMPLETED\n")
 
     send_email_report(EMAIL_ADDRESS, APP_PASSWORD, RECIPIENTS, final_answer.content, 
-                      subject="🚗 Alberta Car Financing Update")
+                      subject="🚗 Alberta Car Promotions Update")
     print("🚀 PIPELINE FINISHED")
 
     
