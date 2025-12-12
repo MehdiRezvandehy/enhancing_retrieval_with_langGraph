@@ -47,13 +47,18 @@ This notebook can be a starting point for RAG experimentation and experimentatio
 
 ### 🧠 [multi_rag_email_pipeline.py](https://github.com/MehdiRezvandehy/multi_rag_workflow_with_langgraph/blob/master/multi_rag_email_pipeline.py)  — What It Does
 
-An example **Python script** implementing a multi-agent / RAG-style workflow for processing email data. While this script is more targeted than the main notebook, it demonstrates how you might:
+A **Python script** implementing a multi-agent / RAG-style workflow for processing email data. While this script is more targeted than the main notebook, it demonstrates how you might:
 
-* Load documents or inputs (e.g., emails),
-* Perform retrieval using RAG patterns,
-* Generate refined output with feedback loops.
+1. **Document Retrieval:** Collects content from URLs and splits it into chunks.
+2. **Relevance Filtering:** Uses an LLM grader to keep only useful documents.
+3. **Query Refinement:** Rewrites the query if no good matches are found.
+4. **Web Search Backup:** Falls back to web search when source retrieval fails.
+5. **RAG Generation:** Combines relevant documents to create final answers.
+6. **Answer Scoring:** Evaluates responses for quality and completeness.
+7. **Multi-Query Support:** Handles multiple questions and generates a unified summary.
+8. **Email Reporting:** Sends the final summary by email in text and HTML.
 
-This script gathers the **latest promotions and special deals for different car brands in Alberta** using a RAG workflow and generates a clean summary report that is emailed to your recipients.
+This script applies a use case that collects the latest promotions and special deals for various car brands in Alberta using a RAG workflow, then generates a clean summary report and emails it to your recipients.
 
 It can also be adapted for custom pipelines and integrations.
 
