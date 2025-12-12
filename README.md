@@ -31,7 +31,7 @@ multi_rag_workflow_with_langgraph/
 
 ## 📌 Key Components
 
-### 📘 enhance_retrieval_langgraph.ipynb
+### 📘 [enhance_retrieval_langgraph.ipynb](https://github.com/MehdiRezvandehy/multi_rag_workflow_with_langgraph/blob/master/multi_rag_workflow_with_langgraph.ipynb)
 
 A **Jupyter Notebook** that:
 
@@ -45,7 +45,7 @@ This notebook can be a starting point for RAG experimentation and experimentatio
 
 ---
 
-### 🧠 multi_rag_email_pipeline.py  — What It Does
+### 🧠 [multi_rag_email_pipeline.py](https://github.com/MehdiRezvandehy/multi_rag_workflow_with_langgraph/blob/master/multi_rag_email_pipeline.py)  — What It Does
 
 An example **Python script** implementing a multi-agent / RAG-style workflow for processing email data. While this script is more targeted than the main notebook, it demonstrates how you might:
 
