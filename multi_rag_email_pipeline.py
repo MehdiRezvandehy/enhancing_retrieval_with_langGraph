@@ -33,7 +33,8 @@ Execution Options:
 - Automated Scheduled Runs: Use GitHub Actions to run the pipeline on a schedule (daily, weekly,
   hourly). Store credentials in GitHub Secrets to allow the workflow to authenticate and send emails.
 
-This script shows the usecase of   
+This script gathers the latest promotions and special deals for different car brands in Alberta using a 
+Multi RAG workflow and generates a clean summary report that is emailed to your recipients.  
 """
 
 from datetime import date
