@@ -20,7 +20,6 @@ multi_rag_workflow_with_langgraph/
 ├── assets/
 │   ├── enhancing_retrieval_langGraph.gif
 │   └── … other visuals …
-├── enhance_retrieval_langgraph.ipynb         # Primary notebook demonstration
 ├── multi_rag_email_pipeline.py               # Python script example showing an email RAG workflow
 ├── requirements.txt                           # Python dependencies
 └── README.md                                  # This file
